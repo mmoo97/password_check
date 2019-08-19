@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% block navbar %}
+{{super()}}
+{% endblock %}
+{% block body %}
+<p>
+<b>Your Password:</b> {{ password }}
+    <br>
+    <br>
+{% if result %}
+    <span style="color: #3A7734">Correct :)</span>
+
+    {% else %}
+    <span style="color: #9C1A1C">Incorrect :(</span>
+
+    {% endif %}
+</p>
+{% endblock %}
